@@ -1,0 +1,145 @@
+import java.util.Scanner;
+
+public class Probleme {
+	
+	private static Scanner scan = new Scanner(System.in);
+	
+	public static void prob1() {
+		int nr = scan.nextInt();
+		if(nr<1 || nr>10) {
+			System.out.println("INVALID");
+		}
+		else {
+			if (nr>5) {
+				System.out.println("ADMIS");}
+				else {
+					System.out.println("RESPINS");
+				}
+			}
+		}
+	public static void prob2() {
+		int nr = scan.nextInt();
+		switch(nr){
+		case 1:{
+			System.out.println("UNU");
+			break;
+			}
+		case 2:{
+			System.out.println("DOI");
+			break;
+			}
+		case 3:{
+			System.out.println("TREI");
+			break;
+			}
+		case 4:{
+			System.out.println("PATRU");
+			break;
+			}
+		case 5:{
+			System.out.println("CINCI");
+			break;
+			}
+		default :{
+			System.out.println("INVALID");
+			}
+		}
+	}
+	public static void prob3() {
+		int nr1 = scan.nextInt("numarul este= ");
+		int nr2 = scan.nextInt("numarul este= ");
+		
+		if(nr1%2==0 && nr2%2==0 ) {
+			System.out.println((nr1+nr2)/2);
+		}
+		else {
+			if(nr1%2==1 && nr2%2==1) {
+				System.out.println(nr1*nr2);
+			}
+			else {
+				System.out.println(nr1+nr2);
+			}
+		}
+	}
+	public static void prob4() {
+		int nr1 = scan.nextInt("numarul este= ");
+		int nr2 = scan.nextInt("numarul este= ");
+		int nr3 = scan.nextInt("numarul este= ");
+		
+		int min = Math.min(nr1, nr2);
+		System.out.println(Math.min(nr3, min));
+	}
+	public static void prob5() {
+		int nr = scan.nextInt();
+		
+		int sum=0,x=0;
+		for(int i=0; i<nr; i++) {
+			sum = sum + x;
+			x = x+2;
+			
+		}
+		System.out.println(sum);
+	}
+	public static void prob6() {
+		int nr = scan.nextInt("numarul este= ");
+		
+		int sum=0,x=1;
+		for(int i=0; i<nr; i++) {
+			sum = sum + x;
+			x = x+2;
+			
+		}
+		System.out.println(sum);
+	}
+	public static void prob7() {
+		int nr =scan.nextInt();
+		
+		int sum=0;
+		for(int i=0;i<nr;i++) {
+			int h = scan.nextInt();
+			sum = sum + h;
+		}
+		System.out.println(sum/nr);
+	}
+	public static void prob8() {
+		int nr = scan.nextInt("numarul este= ");
+		int fact = 1;
+		for (int i=1; i<=nr; i++) {
+			fact = fact*i;
+		}
+		System.out.println(fact);
+	}
+	public static void prob9() {
+		int nr = scan.nextInt("numarul este= ");
+		boolean prim = true;
+		
+		if (nr>1) {
+			for(int i=2;nr>=i*i;i++) {
+				if(nr%i==0) {
+					prim=false;
+				}
+			}
+		}
+		if(prim) {
+			System.out.println("numarul este prim");
+		}else {
+			System.out.println("numarul nu este prim");
+		}
+	}
+	public static void prob10() {
+		
+		boolean prim = false;
+		int nr = 1000;
+		
+		while(prim == false) {
+			nr++;
+			prim = true;
+			for(int i =2; nr>=i*i; i++) {
+				if(nr%i==0) {
+					prim=false;
+				}
+			}
+		}
+		System.out.println(nr);
+	}
+	
